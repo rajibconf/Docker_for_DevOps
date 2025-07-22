@@ -1,0 +1,2 @@
+This is from guest machine
+This is from host machine
