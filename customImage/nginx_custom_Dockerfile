@@ -1,0 +1,16 @@
+FROM ubuntu:latest
+
+LABEL version="0.0.1"
+LABEL description="Custom Nginx Docker Image for DevOps"
+LABEL maintainer="rajib.conf@gmail.com"
+
+WORKDIR /var/www/html/
+
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install nginx -y
+
+COPY ./barista_cafe/ /var/www/html/
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

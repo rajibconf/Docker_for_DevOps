@@ -1,0 +1,8 @@
+FROM nginx:latest
+
+LABEL version="0.0.1"
+LABEL description="Extend Nginx Docker Image for DevOps"
+
+WORKDIR /usr/share/nginx/html
+
+COPY index.html index.html
